@@ -1,0 +1,28 @@
+{
+  "name": "@mywheels/api",
+  "version": "1.1.2",
+  "private": true,
+  "license": "MIT",
+  "prettier": {},
+  "scripts": {
+    "clean": "rm -rf tsconfig.tsbuildinfo dist",
+    "build": "swc src --copy-files -d dist",
+    "dev": "yarn clean && npx concurrently -c '#1b70de,#32af4b' -n build,run 'yarn build -w' 'wait-on dist && NODE_ENV=development nodemon -w dist -w package.json dist/main.js -q'"
+  },
+  "dependencies": {
+    "@mikro-orm/cli": "5.4.2",
+    "@mikro-orm/core": "5.4.2",
+    "@mikro-orm/postgresql": "5.4.2",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "1.3.1",
+    "@types/node": "18.0.0",
+    "nodemon": "^2.0.20",
+    "typescript": "~4.7.4",
+    "wait-on": "^6.0.1",
+    "concurrently": "^7.2.2"
+  }
+}

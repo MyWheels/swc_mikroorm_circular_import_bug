@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    // Basic options
+    "incremental": true,
+    "target": "ESNext",
+    "lib": ["ESNext", "esnext.asynciterable"],
+    "module": "commonjs",
+    "outDir": "dist",
+
+    "noEmit": true,
+
+    // Strict Type-Checking options
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    // Module resolution options
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "isolatedModules": false,
+
+    // Experimental options
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    // Advanced options
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

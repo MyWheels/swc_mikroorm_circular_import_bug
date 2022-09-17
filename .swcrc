@@ -1,0 +1,25 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "decorators": true,
+      "dynamicImport": true
+    },
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": true
+    },
+    "target": "es2018",
+    "baseUrl": "src",
+    "paths": {
+      "lib/*": ["lib/*"],
+      "app/*": ["app/*"],
+      "fixtures/*": ["fixtures/*"],
+      "test-utils/*": ["test-utils/*"]
+    }
+  },
+  "module": {
+    "type": "commonjs"
+  }
+}
